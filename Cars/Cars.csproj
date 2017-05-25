@@ -42,18 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="CarExtensions.cs" />
-    <Compile Include="Manufacturer.cs" />
+    <Compile Include="Examples\AggregateExample.cs" />
+    <Compile Include="Model\Car.cs" />
+    <Compile Include="Extensions\CarExtensions.cs" />
+    <Compile Include="Examples\FilteringExample.cs" />
+    <Compile Include="Examples\GroupExample.cs" />
+    <Compile Include="Examples\JoinExample.cs" />
+    <Compile Include="Model\Manufacturer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Examples\XMLExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="fuel.csv">
+    <None Include="Data\fuel.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="manufacturers.csv">
+    <None Include="Data\manufacturers.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
