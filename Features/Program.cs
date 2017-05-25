@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Features
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Func<int, int> square = x => x * x;
 
@@ -21,7 +19,7 @@ namespace Features
             Action<int> writeInt = x => Console.WriteLine(x);
 
             writeInt(square(add(3, 5)));
-            
+
             IEnumerable<Employee> developers = new Employee[]
             {
                 new Employee { Id = 1, Name = "Alex" },
@@ -41,7 +39,7 @@ namespace Features
                 writeString(employee.Name);
             }
 
-            foreach(var employee in developers.Where(StartsWithH))
+            foreach (var employee in developers.Where(StartsWithH))
             {
                 writeString(employee.Name);
             }
@@ -49,7 +47,7 @@ namespace Features
             writeInt(Custom.MyLinq.Count(sales));
 
             IEnumerator<Employee> enumerator = sales.GetEnumerator();
-            while(enumerator.MoveNext())
+            while (enumerator.MoveNext())
             {
                 writeString(enumerator.Current.Name);
             }
@@ -62,9 +60,9 @@ namespace Features
             }
 
             var querySQL = from developer in developers
-                         where developer.Name.Length == 4
-                         orderby developer.Name
-                         select developer;
+                           where developer.Name.Length == 4
+                           orderby developer.Name
+                           select developer;
 
             foreach (var employee in querySQL)
             {

@@ -4,9 +4,9 @@
     {
         public string Title { get; set; }
         public float Rating { get; set; }
-        
 
-        int _year;
+        private int _year;
+
         public int Year
         {
             get

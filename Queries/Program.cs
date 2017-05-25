@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Queries
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var movies = new List<Movie>
             {
@@ -21,7 +19,7 @@ namespace Queries
             var query = movies.Filter(m => m.Year > 2000).OrderByDescending(M => M.Rating);
 
             var enumarator = query.GetEnumerator();
-            while(enumarator.MoveNext())
+            while (enumarator.MoveNext())
             {
                 Console.WriteLine(enumarator.Current.Title);
             }

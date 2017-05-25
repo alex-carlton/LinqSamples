@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Features.Custom
 {
@@ -12,7 +8,7 @@ namespace Features.Custom
         {
             int count = 0;
 
-            foreach(var item in sequence)
+            foreach (var item in sequence)
             {
                 count += 1;
             }

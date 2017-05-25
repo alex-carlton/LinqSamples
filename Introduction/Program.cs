@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Introduction
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             string path = @"C:\windows";
 
@@ -23,8 +21,8 @@ namespace Introduction
         private static void ShowLargeFilesWithLinq(string path)
         {
             var querySQL = from file in new DirectoryInfo(path).GetFiles()
-                            orderby file.Length descending
-                            select file;
+                           orderby file.Length descending
+                           select file;
 
             foreach (var file in querySQL.Take(5))
             {
@@ -52,7 +50,7 @@ namespace Introduction
             for (int i = 0; i < 5; i++)
             {
                 FileInfo file = files[i];
-                Console.WriteLine($"{file.Name, -20} : {file.Length, 10:N0}");
+                Console.WriteLine($"{file.Name,-20} : {file.Length,10:N0}");
             }
         }
 
