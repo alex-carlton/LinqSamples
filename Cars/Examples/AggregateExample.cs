@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cars
 {
-    internal class AggregateExample : Program
+    internal class AggregateExample
     {
-        public static void AggregateLinq()
+        public static void AggregateLinq(List<Car> cars, List<Manufacturer> manufacturers)
         {
             var aggregating = from car in cars
                               group car by car.Manufacturer into carGroup

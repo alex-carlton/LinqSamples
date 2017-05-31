@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Cars
 {
-    public class FilteringExample : Program
+    internal class FilteringExample
     {
-        public static void FilterLinq()
+        public static void FilterLinq(List<Car> cars, List<Manufacturer> manufacturers)
         {
             var result = cars.All(c => c.Manufacturer == "Ford");
             Console.WriteLine(result);

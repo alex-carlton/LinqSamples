@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cars
 {
-    internal class GroupExample : Program
+    internal class GroupExample
     {
-        public static void GroupLinq()
+        public static void GroupLinq(List<Car> cars, List<Manufacturer> manufacturers)
         {
             var groupByHeadquarters = from manufacturer in manufacturers
                                       join car in cars on manufacturer.Name equals car.Manufacturer

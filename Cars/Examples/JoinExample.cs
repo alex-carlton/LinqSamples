@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cars
 {
-    internal class JoinExample : Program
+    internal class JoinExample
     {
-        public static void JoinLinq()
+        public static void JoinLinq(List<Car> cars, List<Manufacturer> manufacturers)
         {
             var joinQuery = from car in cars
                             join manufacturer in manufacturers

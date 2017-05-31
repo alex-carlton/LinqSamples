@@ -7,16 +7,18 @@ namespace Cars
 {
     public class Program
     {
-        public static List<Car> cars { get { return ProcessFile("Data/fuel.csv"); } }
-        public static List<Manufacturer> manufacturers { get { return ProcessManufacturers("Data/manufacturers.csv"); } }
-
         private static void Main(string[] args)
         {
-            FilteringExample.FilterLinq();
+            var cars = ProcessFile("Data/fuel.csv");
+            var manufacturers = ProcessManufacturers("Data/manufacturers.csv");
 
-            JoinExample.JoinLinq();
-            GroupExample.GroupLinq();
-            AggregateExample.AggregateLinq();
+            //FilteringExample.FilterLinq(cars, manufacturers);
+
+            //JoinExample.JoinLinq(cars, manufacturers);
+            //GroupExample.GroupLinq(cars, manufacturers);
+            //AggregateExample.AggregateLinq(cars, manufacturers);
+
+            XMLExample.XmlLinq(cars);
 
             Console.ReadKey();
         }
